@@ -114,7 +114,7 @@ body:not(.entered) #petals{display:none}
 #gate.hide{opacity:0;visibility:hidden}
 #gate.gone{display:none}
 #gateCover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  object-position:50% 34%;z-index:0;transform-origin:50% 40%;
+  object-position:50% 25%;z-index:0;transform-origin:50% 30%;
   animation:coverDrift 26s ease-in-out infinite alternate}
 @keyframes coverDrift{from{transform:scale(1.05)}to{transform:scale(1.13)}}
 @media(prefers-reduced-motion:reduce){#gateCover{animation:none;transform:scale(1.05)}}
@@ -454,8 +454,10 @@ section{position:relative;z-index:2}
   letter-spacing:.32em;text-transform:uppercase;color:var(--cloud-deep);margin-bottom:12px}
 
 /* ── BLESSING (du'a) ── */
-.family-blessing{background:rgba(223,235,247,.50);padding:80px 0;position:relative;z-index:2}
-.fbl-inner{max-width:720px;margin:0 auto;padding:0 24px;text-align:center;position:relative;z-index:1}
+.family-blessing{position:relative;z-index:2;padding:90px 0;overflow:hidden;background:rgba(223,235,247,.45)}
+.family-blessing::before{content:"";position:absolute;inset:0;background:url('assets/couple.jpg') center 24%/cover no-repeat;opacity:.18;pointer-events:none}
+.family-blessing::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, rgba(242,248,253,.84) 0%, rgba(223,235,247,.90) 100%);pointer-events:none}
+.fbl-inner{max-width:720px;margin:0 auto;padding:0 24px;text-align:center;position:relative;z-index:2}
 .family-blessing .s-title{text-align:center}
 .fbl-divider{width:58px;height:1px;background:var(--cloud-deep);margin:26px auto}
 /* the du'a's dedication line, which used to sit over the photo */
